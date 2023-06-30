@@ -17,29 +17,68 @@ import { Modal } from 'react-responsive-modal';
 import ReactPlayer from "react-player";
 import SEO from '../../../components/seo';
 
+import { useParams } from 'react-router-dom';
+import { fetchCourseDetails } from '../../../redux/features/courseDetailsSlice';
+
+import { staticCourses } from '../../../redux/features/staticCourseData';
+
+
 
 
 const CourseDetails = () => {
+
+
+  // const { courseId } = useParams();
+  // const status = useSelector(state => state.courseDetails.status);
+  // const courseDetails = useSelector(state => state.courseDetails.courseDetails);
+
+
+
+
+
+  // // Find the course object with the matching id
+  // const course = staticCourses.find(course => course.id === courseId);
+
+
+
+
+  // dispatch
+  const dispatch = useDispatch();
+
+
+
   //sidebar show
   const [show, setShow] = useState(false);
   //sidebar handleClose
   const handleClose = () => setShow(false);
   //sidebar handleShow
   const handleShow = () => setShow(true);
-  // paymentInformation
-  const [paymentInformation, setPaymentInformation] = useState({});
+
   // allCourseItems
   const allCourseItems = useSelector(state => state.courses.allCourses);
   //courseStatus
   const courseStatus = useSelector(state => state.courses.courseStatus);
   // courseData
   const courseData = useSelector(state => state.courses.course);
-  // dispatch
-  const dispatch = useDispatch();
+  
   // router
   const router = useRouter();
   // query id
   const id = router.query.slug;
+
+  const { slug } = router.query;
+
+  // Find the course object with the matching slug
+  const course = staticCourses.find(course => course.id === slug);
+
+  // Access the properties of the course object
+  const { category, title } = course || {};
+
+
+  
+
+
+
   // user
   const { user } = useAuth();
   // video popup
@@ -48,7 +87,7 @@ const CourseDetails = () => {
   const onCloseModal = () => setOpen(false);
 
   // distructure data
-  const { _id, teacher_img, tutor_name, img_bg, date, title, category, review, price, enrolled,
+  const { _id, teacher_img, tutor_name, img_bg, date, review, price, enrolled,
     lectures, duration } = courseData;
   // dispatch singleCourse
   useEffect(() => {
@@ -60,15 +99,15 @@ const CourseDetails = () => {
     }
   }, [id, dispatch])
   // query payment info
-  useEffect(() => {
-    if (_id && user.email) {
-      fetch(`https://obscure-shelf-38503.herokuapp.com/paymentInfo?email=${user?.email}&&id=${_id}`)
-        .then(res => res.json())
-        .then(data => {
-          setPaymentInformation(data.result)
-        })
-    }
-  }, [user.email, _id])
+  // useEffect(() => {
+  //   if (_id && user.email) {
+  //     fetch(`https://obscure-shelf-38503.herokuapp.com/paymentInfo?email=${user?.email}&&id=${_id}`)
+  //       .then(res => res.json())
+  //       .then(data => {
+  //         setPaymentInformation(data.result)
+  //       })
+  //   }
+  // }, [user.email, _id])
  
   return (
     <>
@@ -113,10 +152,10 @@ const CourseDetails = () => {
                     </span>
                     <span>Courses</span>
                   </div>
-                  <span className="breadcrumb__title-pre">{category}</span>
-                  <h5 className="breadcrumb__title-2">{title}</h5>
+                  <span className="breadcrumb__title-pre">Object-oriented programming</span>
+                  <h5 className="breadcrumb__title-2">Javascript Course</h5>
                 </div>
-                <div className="course__meta-2 d-sm-flex align-items-center mb-30">
+                {/* <div className="course__meta-2 d-sm-flex align-items-center mb-30">
                   <div className="course__teacher-3 d-flex align-items-center mr-70 mb-30">
                     <div className="course__teacher-thumb-3 mr-15">
                       <img src={teacher_img} alt="" />
@@ -143,14 +182,14 @@ const CourseDetails = () => {
                       <p>{review}</p>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="course__img w-img mb-30">
                   <img src={img_bg} alt="" />
                 </div>
 
                 <DetailsTabItems dynamicPage={true} />
 
-                <div className="course__related">
+                {/* <div className="course__related">
                   <div className="row">
                     <div className="col-xxl-12">
                       <div className="section__title-wrapper mb-40">
@@ -183,11 +222,11 @@ const CourseDetails = () => {
 
                           {
                             allCourseItems.slice(0, 6).map(testimonial => {
-                              const { price, category, img_bg, title, review, enrolled, watching, teacher_img, _id } = testimonial;
+                              const { price, category, img_bg, title, review, enrolled, watching, teacher_img, id } = testimonial;
                               return <SwiperSlide key={testimonial.id}>
                                 <div className="course__item-2 swiper-slide transition-3 white-bg mb-30 fix">
                                   <div className="course__thumb-2 w-img fix course_thumb_height">
-                                    <Link href={`/course-details/${_id}`}>
+                                    <Link href={`/course-details/${id}`}>
                                       <a>
                                         <img src={img_bg} alt="" />
                                       </a>
@@ -196,7 +235,7 @@ const CourseDetails = () => {
                                   <div className="course__content-2">
                                     <div className="course__top-2 d-flex align-items-center justify-content-between">
                                       <div className="course__tag-2">
-                                        <Link href={`/course-details/${_id}`}>
+                                        <Link href={`/course-details/${id}`}>
                                           <a >{category}</a>
                                         </Link>
                                       </div>
@@ -205,7 +244,7 @@ const CourseDetails = () => {
                                       </div>
                                     </div>
                                     <h3 className="course__title-2">
-                                      <Link href={`/course-details/${_id}`}>
+                                      <Link href={`/course-details/${id}`}>
                                         <a >{title.slice(0, 30)}...</a>
                                       </Link>
                                     </h3>
@@ -222,12 +261,12 @@ const CourseDetails = () => {
                                                   </svg>
                                                 </span>
                                               </div>
-                                              <div className="course__action-content">
+                                              {/* <div className="course__action-content">
                                                 <span>{enrolled.substring(0, 3)}</span>
-                                              </div>
-                                            </div>
-                                          </li>
-                                          <li>
+                                              </div> */}
+                                            {/* </div>
+                                          </li> */} 
+                                          {/* <li>
                                             <div className="course__action-item d-flex align-items-center">
                                               <div className="course__action-icon mr-5">
                                                 <span>
@@ -276,7 +315,7 @@ const CourseDetails = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
               </div>
             </div>
@@ -289,21 +328,21 @@ const CourseDetails = () => {
                 </div>
                 <div className="course__sidebar-widget-2 white-bg mb-20">
                   <div className="course__video">
-                    <div className="course__video-thumb w-img mb-25">
+                    {/* <div className="course__video-thumb w-img mb-25">
                       <img src={"/" + "assets/img/course/video/course-video.jpg"} alt="" />
                       <div className="course__video-play">
                         <button onClick={onOpenModal} className="play-btn popup-video">
                           <i className="fas fa-play"></i> </button>
                       </div>
-                    </div>
-                    <div className="course__video-meta mb-25 d-flex align-items-center justify-content-between">
+                    </div> */}
+                    {/* <div className="course__video-meta mb-25 d-flex align-items-center justify-content-between">
                       <div className="course__video-price">
                         <h5>${price}</h5>
                       </div>
                       <div className="course__video-discount">
                         <span>On Sale</span>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="course__video-content mb-35">
                       <ul>
                         <li className="d-flex align-items-center">
@@ -353,7 +392,7 @@ const CourseDetails = () => {
                             <h5><span>Enrolled :</span>{enrolled?.substring(0, 3)} students</h5>
                           </div>
                         </li>
-                        <li className="d-flex align-items-center">
+                        {/* <li className="d-flex align-items-center">
                           <div className="course__video-icon">
                             <svg>
                               <circle className="st0" cx="8" cy="8" r="6.7" />
@@ -364,10 +403,10 @@ const CourseDetails = () => {
                           <div className="course__video-info">
                             <h5><span>Language :</span>English</h5>
                           </div>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
-                    <div className="course__payment mb-35">
+                    {/* <div className="course__payment mb-35">
                       <h3>Payment:</h3>
                       <a href="#">
                         <img src={"/" + "assets/img/course/payment/payment-1.png"} alt="" />
@@ -375,9 +414,11 @@ const CourseDetails = () => {
                     </div>
 
 
-                    <button onClick={() => dispatch(addToCart(courseData))} type="button" className="tp-btn w-100 text-center my-3">Add To Cart <i className="fa-solid fa-cart-shopping ms-3"></i> </button>
+                    */}
 
-                    <div className="course__enroll-btn">
+                    <Link href='/lesson'><button type="button" className="tp-btn w-100 text-center my-3">Start Course </button></Link>
+
+                    {/* <div className="course__enroll-btn">
                       {
                         user?.email && !paymentInformation?.payment ? <button onClick={handleShow} type="button" className="tp-btn w-100 text-center">Enroll
                           <i className="far fa-arrow-right ms-3"></i>
@@ -391,7 +432,7 @@ const CourseDetails = () => {
                             </a>
                           </Link>
                       }
-                    </div>
+                    </div> */}
 
                   </div>
                 </div>

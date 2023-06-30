@@ -4,12 +4,31 @@ import { useSelector } from 'react-redux';
 import DetailsTabItems from './DetailsTabItems';
 SwiperCore.use([Pagination]);
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import { staticCourses } from '../../redux/features/staticCourseData';
 
 
-const CourseDetailsLeftSide = ({ courseData }) => {
-   // distructure courseData
-   const { category, date, img_bg, review, teacher_img, tutor_name, title } = courseData;
+
+const CourseDetailsLeftSide = () => {
+   // // distructure courseData
+   // const { category, date, img_bg, review, teacher_img, tutor_name, title } = courseData;
+
+   const router = useRouter();
+   const { id } = router.query;
+
+   // Find the course object with the matching id
+   const course = staticCourses.find(course => course.id === id);
+
+  // Access the properties of the course object
+   const { title, category, date, img_bg, review, teacher_img, tutor_name } = course || {};
+
+
+  
+
+
    // all courses
+   
    const courses = useSelector(state => state.courses.allCourses);
    return (
       <>
@@ -38,7 +57,7 @@ const CourseDetailsLeftSide = ({ courseData }) => {
                      <h5>Last Update:</h5>
                      <p>{date}</p>
                   </div>
-                  <div className="course__rating-2 mb-30">
+                  {/* <div className="course__rating-2 mb-30">
                      <h5>Review:</h5>
                      <div className="course__rating-inner d-flex align-items-center">
                         <ul>
@@ -50,7 +69,7 @@ const CourseDetailsLeftSide = ({ courseData }) => {
                         </ul>
                         <p>{review}</p>
                      </div>
-                  </div>
+                  </div> */}
                </div>
                <div className="course__img w-img mb-30">
                   <img src={img_bg} alt="" />

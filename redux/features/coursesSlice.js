@@ -1,4 +1,19 @@
-import {createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice, createSelector } from '@reduxjs/toolkit';
+import { staticCourses } from './staticCourseData';
+
+// // Define the static course data
+// const staticCourses = [
+//   {
+//     id: 1,
+//     img_bg: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', // Replace with the actual image URL
+//     title: 'JavaScript Course',
+//     lessons: 2,
+//   },
+// ];
+
+// Define a base selector to get the courses state from the Redux store
+const selectCoursesState = state => state.courses;
+
 
 // get all courses
 export const coursesData = createAsyncThunk(
@@ -23,7 +38,7 @@ export const singleCourse = createAsyncThunk(
 export const coursesSlice = createSlice({
   name: 'courses',
   initialState:{
-    allCourses : [],
+    allCourses : staticCourses,
     status:'',
     course:{},
     courseStatus:'',
@@ -57,6 +72,12 @@ export const coursesSlice = createSlice({
   },
 
 })
+
+// Define the selectCourses selector using createSelector
+export const selectCourses = createSelector(
+  selectCoursesState,
+  courses => courses.allCourses
+);
 
 
 export const { searchText } = coursesSlice.actions

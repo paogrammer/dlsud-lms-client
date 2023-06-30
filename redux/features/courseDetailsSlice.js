@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { staticCourses } from './staticCourseData';
 
 
 // courseDetailsData
@@ -11,28 +12,49 @@ export const courseDetailsData = createAsyncThunk(
   }
 )
 
-
 export const courseDetailsSlice = createSlice({
-  name: 'courses',
+  name: 'courseDetails',
   initialState: {
     courseDetails: {},
     status: '',
   },
   reducers: {
-
+    fetchCourseDetails: (state, action) => {
+      const courseId = action.payload;
+      state.courseDetails = staticCourses.find(course => course.id === courseId);
+      state.status = 'fulfilled';
+    },
   },
+});
 
-  extraReducers: (builder) => {
-    builder.addCase(courseDetailsData.fulfilled, (state, action) => {
-      state.courseDetails = action.payload
-      state.status = 'fulfilled'
-    }),
-      builder.addCase(courseDetailsData.pending, (state, action) => {
-        state.status = 'pending'
-      })
-  },
+export const { fetchCourseDetails } = courseDetailsSlice.actions;
 
-})
+export default courseDetailsSlice.reducer;
 
-// export const { increment } = courseDetailsSlice.actions
-export default courseDetailsSlice.reducer
+
+
+// export const courseDetailsSlice = createSlice({
+//   name: 'courses',
+//   initialState: {
+//     courseDetails: staticCourses[0],
+//     status: '',
+//     allCourses: staticCourses,
+//   },
+//   reducers: {
+
+//   },
+
+//   extraReducers: (builder) => {
+//     builder.addCase(courseDetailsData.fulfilled, (state, action) => {
+//       state.courseDetails = action.payload
+//       state.status = 'fulfilled'
+//     }),
+//       builder.addCase(courseDetailsData.pending, (state, action) => {
+//         state.status = 'pending'
+//       })
+//   },
+
+// })
+
+// // export const { increment } = courseDetailsSlice.actions
+// export default courseDetailsSlice.reducer

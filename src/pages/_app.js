@@ -14,6 +14,8 @@ import { categoryData } from '../../redux/features/categorySlice';
 import { initializeApp } from "firebase/app";
 import { getTotal } from '../../redux/features/cartSlice';
 import SEO from '../../components/seo';
+import { connectToDatabase, disconnectFromDatabase } from './api/db';
+
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
@@ -30,14 +32,26 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 function MyApp({ Component, pageProps }) {
-
   useEffect(() => {
+    // // Connect to MongoDB
+    // connectToDatabase().then(() => {
+    //   console.log('Connected to MongoDB');
+    // });
+
+    // Fetch initial data
     store.dispatch(coursesData());
     store.dispatch(blogData());
     store.dispatch(eventData());
     store.dispatch(teamData());
     store.dispatch(categoryData());
     store.dispatch(getTotal());
+
+    // return () => {
+    //   // Disconnect from MongoDB
+    //   disconnectFromDatabase().then(() => {
+    //     console.log('Disconnected from MongoDB');
+    //   });
+    // };
   }, []);
 
   return (
@@ -48,7 +62,8 @@ function MyApp({ Component, pageProps }) {
         <ToastContainer />
       </Provider>
     </React.Fragment>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
+

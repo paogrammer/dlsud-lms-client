@@ -81,14 +81,14 @@ const CourseDetailsRightSide = ({ courseData }) => {
                               <i className="fas fa-play"></i> </button>
                         </div>
                      </div>
-                     <div className="course__video-meta mb-25 d-flex align-items-center justify-content-between">
+                     {/* <div className="course__video-meta mb-25 d-flex align-items-center justify-content-between">
                         <div className="course__video-price">
                            <h5>${price} </h5>
                         </div>
                         <div className="course__video-discount">
                            <span>On Sale</span>
                         </div>
-                     </div>
+                     </div> */}
                      <div className="course__video-content mb-35">
                         <ul>
                            <li className="d-flex align-items-center">
@@ -115,7 +115,7 @@ const CourseDetailsRightSide = ({ courseData }) => {
                                  <h5><span>Lectures :</span>{lectures}</h5>
                               </div>
                            </li>
-                           <li className="d-flex align-items-center">
+                           {/* <li className="d-flex align-items-center">
                               <div className="course__video-icon">
                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 16 16"
                                     style={{ enableBackground: "new 0 0 16 16" }} xmlSpace="preserve">
@@ -126,7 +126,7 @@ const CourseDetailsRightSide = ({ courseData }) => {
                               <div className="course__video-info">
                                  <h5><span>Duration :</span>{duration}</h5>
                               </div>
-                           </li>
+                           </li> */}
                            <li className="d-flex align-items-center">
                               <div className="course__video-icon">
                                  <svg>

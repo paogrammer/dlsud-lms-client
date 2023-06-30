@@ -37,8 +37,10 @@ const LoginArea = () => {
                <div className="row">
                   <div className="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2">
                      <div className="section__title-wrapper text-center mb-55">
-                        <h2 className="section__title">Sign in to <br />  recharge direct.</h2>
-                        <p>it you dont have an account you can <a href="#">Register here!</a></p>
+                        <h2 className="section__title">Sign in to <br />  start learning.</h2>
+                        <p>it you dont have an account you can <Link href="/sign-up">
+                                    <a >register here!</a>
+                                 </Link> </p>
                      </div>
                   </div>
                </div>
@@ -46,15 +48,15 @@ const LoginArea = () => {
                   <div className="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                      <div className="sign__wrapper white-bg">
                         <div className="sign__header mb-35">
-                           <div onClick={() => handleGoogleSignIn(router)} className="sign__in text-center">
+                           {/* <div onClick={() => handleGoogleSignIn(router)} className="sign__in text-center">
                               <a style={{ cursor: 'pointer' }} className="sign__social g-plus text-start mb-15"><i className="fab fa-google-plus-g"></i>Sign Up with Google</a>
                               <p> <span>........</span> Or, <Link href="/sign-up"><a >sign up</a></Link> with your email<span> ........</span> </p>
-                           </div>
+                           </div> */}
                         </div>
                         <div className="sign__form">
                            <form onSubmit={handleSubmit(onSubmit)}>
                               <div className="sign__input-wrapper mb-25">
-                                 <h5>Work email</h5>
+                                 <h5>DLSU-D email</h5>
                                  <div className="sign__input">
                                     <input required {...register("email")} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="e-mail address" />
                                     <i className="fal fa-envelope"></i>
@@ -81,7 +83,7 @@ const LoginArea = () => {
                               </div>
                               <button className="tp-btn  w-100"> <span></span> Sign In</button>
                               <div className="sign__new text-center mt-20">
-                                 <p>New to Eduker ? <Link href="/sign-up">
+                                 <p>Not registered? <Link href="/sign-up">
                                     <a >Sign Up</a>
                                  </Link> </p>
                               </div>

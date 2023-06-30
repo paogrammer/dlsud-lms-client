@@ -41,7 +41,7 @@ const EventArea = () => {
                               <h5>Last Update:</h5>
                               <p>July 24, 2022</p>
                            </div>
-                           <div className="course__rating-2 mb-30">
+                           {/* <div className="course__rating-2 mb-30">
                               <h5>Review:</h5>
                               <div className="course__rating-inner d-flex align-items-center">
                                  <ul>
@@ -53,7 +53,7 @@ const EventArea = () => {
                                  </ul>
                                  <p>4.5</p>
                               </div>
-                           </div>
+                           </div> */}
                         </div>
                      </div>
                   </div>

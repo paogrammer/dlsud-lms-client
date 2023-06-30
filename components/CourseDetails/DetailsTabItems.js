@@ -1,21 +1,24 @@
 
+
+
+
 const DetailsTabItems = ({ dynamicPage }) => {
    return (
       <>
          <div className="course__tab-2 mb-45">
             <ul className="nav nav-tabs" id="courseTab" role="tablist">
                <li className="nav-item" role="presentation">
-                  <button className="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true"><i className="fa-regular fa-medal"></i> <span>Discription</span> </button>
+                  <button className="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true"><i className="fa-regular fa-medal"></i> <span>Description</span> </button>
                </li>
                <li className="nav-item" role="presentation">
                   <button className="nav-link " id="curriculum-tab" data-bs-toggle="tab" data-bs-target="#curriculum" type="button" role="tab" aria-controls="curriculum" aria-selected="false"><i className="fa-regular fa-book-blank"></i> <span>Curriculum</span> </button>
                </li>
-               <li className="nav-item" role="presentation">
+               {/* <li className="nav-item" role="presentation">
                   <button className="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false"> <i className="fa-regular fa-star"></i> <span>Reviews</span> </button>
-               </li>
-               <li className="nav-item" role="presentation">
+               </li> */}
+               {/* <li className="nav-item" role="presentation">
                   <button className="nav-link" id="member-tab" data-bs-toggle="tab" data-bs-target="#member" type="button" role="tab" aria-controls="member" aria-selected="false"> <i className="fal fa-user"></i> <span>Members</span> </button>
-               </li>
+               </li> */}
             </ul>
          </div>
 
@@ -28,11 +31,11 @@ const DetailsTabItems = ({ dynamicPage }) => {
 
                      <div className="course__tag-4 mb-35 mt-35">
                         <i className="fal fa-tag"></i>
-                        <a href="#">Big data,</a>
-                        <a href="#">Data analysis,</a>
-                        <a href="#">Data modeling</a>
+                        <a href="#">Javascript,</a>
+                        <a href="#"> Object-oriented programming</a>
+                        
                      </div>
-                     <div className="course__description-list mb-45">
+                     {/* <div className="course__description-list mb-45">
                         <h4>What is the Target Audience?</h4>
                         <ul>
                            <li> <i className="fa-solid fa-check"></i> Business managers, leaders</li>
@@ -77,7 +80,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </div> */}
                   </div>
                </div>
 
@@ -101,14 +104,14 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Reading:</span> Ut enim ad minim veniam</h3>
+                                       <h3> <span>Lesson 1:</span> Hello, World!</h3>
                                     </div>
-                                    <div className="course__curriculum-meta">
+                                    {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 14 minutes</span>
                                        <span className="question">2 questions</span>
-                                    </div>
+                                    </div> */}
                                  </div>
-                                 <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
+                                 {/* <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
                                     <div className="course__curriculum-info">
                                        <svg viewBox="0 0 24 24">
                                           <polygon className="st0" points="23,7 16,12 23,17 " />
@@ -133,7 +136,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                        <span className="time"> <i className="icon_clock_alt"></i> 7 minutes</span>
                                        <span className="question">3 questions</span>
                                     </div>
-                                 </div>
+                                 </div> */}
                                  <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
                                     <div className="course__curriculum-info">
                                        <svg className="document" viewBox="0 0 24 24">
@@ -143,11 +146,11 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Reading: </span> Ut enim ad minim veniam</h3>
+                                       <h3> <span>Lesson 2: </span> Sum of 2 variables</h3>
                                     </div>
-                                    <div className="course__curriculum-meta">
+                                    {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 22 minutes</span>
-                                    </div>
+                                    </div> */}
                                  </div>
                               </div>
                            </div>
@@ -162,7 +165,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                            </h2>
                            <div id="week-02-content" className="accordion-collapse  collapse show" aria-labelledby="week-02" data-bs-parent="#course__accordion-2">
                               <div className="accordion-body">
-                                 <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
+                              <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
                                     <div className="course__curriculum-info">
                                        <svg className="document" viewBox="0 0 24 24">
                                           <path className="st0" d="M14,2H6C4.9,2,4,2.9,4,4v16c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8L14,2z" />
@@ -171,13 +174,14 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Reading:</span> Ut enim ad minim veniam</h3>
+                                       <h3> <span>Lesson 1:</span> Hello, World!</h3>
                                     </div>
-                                    <div className="course__curriculum-meta">
+                                    {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 14 minutes</span>
-                                    </div>
+                                       <span className="question">2 questions</span>
+                                    </div> */}
                                  </div>
-                                 <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
+                                 {/* <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
                                     <div className="course__curriculum-info">
                                        <svg viewBox="0 0 24 24">
                                           <polygon className="st0" points="23,7 16,12 23,17 " />
@@ -192,6 +196,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                  <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
                                     <div className="course__curriculum-info">
                                        <svg viewBox="0 0 16 16">
+
                                           <path className="st0" d="M2,12V8c0-3.3,2.9-6,6.4-6s6.4,2.7,6.4,6v4" />
                                           <path className="st0" d="M14.8,12.7c0,0.7-0.6,1.3-1.4,1.3h-0.7c-0.8,0-1.4-0.6-1.4-1.3v-2c0-0.7,0.6-1.3,1.4-1.3h2.1V12.7z M2,12.7  C2,13.4,2.6,14,3.3,14H4c0.7,0,1.3-0.6,1.3-1.3v-2c0-0.7-0.6-1.3-1.3-1.3H2V12.7z" />
                                        </svg>
@@ -199,9 +204,9 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                     </div>
                                     <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 7 minutes</span>
-                                       <span className="question">2 questions</span>
+                                       <span className="question">3 questions</span>
                                     </div>
-                                 </div>
+                                 </div> */}
                                  <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
                                     <div className="course__curriculum-info">
                                        <svg className="document" viewBox="0 0 24 24">
@@ -211,11 +216,11 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Reading: </span> Ut enim ad minim veniam</h3>
+                                       <h3> <span>Lesson 2: </span> Sum of 2 variables</h3>
                                     </div>
-                                    <div className="course__curriculum-meta">
+                                    {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 22 minutes</span>
-                                    </div>
+                                    </div> */}
                                  </div>
                               </div>
                            </div>
@@ -451,7 +456,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                      </div>
                   </div>
                </div>
-               <div className="tab-pane fade" id="member" role="tabpanel" aria-labelledby="member-tab">
+               {/* <div className="tab-pane fade" id="member" role="tabpanel" aria-labelledby="member-tab">
                   <div className="course__member mb-45">
                      <div className="course__member-item">
                         <div className="row align-items-center">
@@ -553,15 +558,15 @@ const DetailsTabItems = ({ dynamicPage }) => {
                         </div>
                      </div>
                   </div>
-               </div>
-               <div className="course__share">
+               </div> */}
+               {/* <div className="course__share">
                   <h3>Share :</h3>
                   <ul>
                      <li><a href="#" className="fb" ><i className="fa-brands fa-facebook-f"></i></a></li>
                      <li><a href="#" className="tw" ><i className="fa-brands fa-twitter"></i></a></li>
                      <li><a href="#" className="pin" ><i className="fa-brands fa-pinterest-p"></i></a></li>
                   </ul>
-               </div>
+               </div> */}
             </div>
          </div>
       </>

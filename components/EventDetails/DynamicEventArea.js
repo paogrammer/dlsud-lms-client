@@ -44,7 +44,7 @@ const DynamicEventArea = ({ eventDetails }) => {
                               <h5>Last Update:</h5>
                               <p>{date}</p>
                            </div>
-                           <div className="course__rating-2 mb-30">
+                           {/* <div className="course__rating-2 mb-30">
                               <h5>Review:</h5>
                               <div className="course__rating-inner d-flex align-items-center">
                                  <ul>
@@ -56,7 +56,7 @@ const DynamicEventArea = ({ eventDetails }) => {
                                  </ul>
                                  <p>{review}</p>
                               </div>
-                           </div>
+                           </div> */}
                         </div>
                      </div>
                   </div>

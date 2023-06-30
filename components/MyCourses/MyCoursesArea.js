@@ -1,7 +1,15 @@
 import { useSelector } from "react-redux";
 import Link from 'next/link';
+import { selectCourses } from '../../redux/features/coursesSlice';
+import { staticCourses  } from '../../redux/features/staticCourseData';
+
+import { useRouter } from 'next/router';
+
+
 
 const MyCoursesArea = () => {
+   
+   const courses = useSelector(selectCourses);
    // myCourses
    const myCourses = useSelector(state => state.order.myOrders);
    // loaderStatus
@@ -25,12 +33,12 @@ const MyCoursesArea = () => {
             <div className="container">
                <div className="row">
                   {
-                     myCourses.map(course => {
+                     staticCourses.map(course => {
 
                         return <div key={course?._id} className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                            <div className="course__item-2 transition-3 white-bg mb-30 fix">
                               <div className="course__thumb-2 w-img fix course_thumb_height">
-                                 <Link href={`/course-details/${course?._id}`}>
+                                 <Link href={`/course-details/${course?.id}`}>
                                     <a>
                                        <img src={course?.img_bg} alt="" />
                                     </a>
@@ -39,22 +47,22 @@ const MyCoursesArea = () => {
                               <div className="course__content-2">
                                  <div className="course__top-2 d-flex align-items-center justify-content-between">
                                     <div className="course__tag-2">
-                                       <Link href={`/course-details/${course?._id}`}>
+                                       <Link href={`/course-details/${course?.id}`}>
                                           <a >{course?.category}</a>
                                        </Link>
                                     </div>
-                                    <div className="course__price-2">
+                                    {/* <div className="course__price-2">
                                        <span>${course?.price}</span>
-                                    </div>
+                                    </div> */}
                                  </div>
                                  <h3 className="course__title-2">
-                                    <Link href={`/course-details/${course?._id}`}>
+                                    <Link href={`/course-details/${course?.id}`}>
                                        <a >{course?.title}</a>
                                     </Link>
                                  </h3>
                                  <div className="course__bottom-2 d-flex align-items-center justify-content-between">
                                     <div className="course__action">
-                                       <ul>
+                                       {/* <ul>
                                           <li>
                                              <div className="course__action-item d-flex align-items-center">
                                                 <div className="course__action-icon mr-5">
@@ -99,7 +107,7 @@ const MyCoursesArea = () => {
                                                 </div>
                                              </div>
                                           </li>
-                                       </ul>
+                                       </ul> */}
                                     </div>
                                     <div className="course__tutor-2">
                                        <a href="#">
