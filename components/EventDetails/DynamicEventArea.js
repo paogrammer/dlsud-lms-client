@@ -20,7 +20,7 @@ const DynamicEventArea = ({ eventDetails }) => {
                         <div className="page__title-content mb-25">
                            <div className="breadcrumb__list breadcrumb__list-2 mb-10">
                               <span>
-                                 <Link href="/">
+                                 <Link href="/my-courses">
                                     <a >Home</a>
                                  </Link>
                               </span>

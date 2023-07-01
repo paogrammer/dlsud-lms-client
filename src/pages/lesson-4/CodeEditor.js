@@ -26,7 +26,7 @@ const CodeEditorComponent = () => {
     const comments = [];
     const consoleOutput = [];
     const originalConsoleLog = console.log;
-  
+
     console.log = (message) => {
       if (typeof message === 'string' && message.startsWith('//')) {
         comments.push(message); // Capture comments
@@ -34,30 +34,30 @@ const CodeEditorComponent = () => {
         consoleOutput.push(message); // Capture console output
       }
     };
-  
+
     try {
       eval(code);
-  
-      let myFunction;
+
+      let book;
       const codeLines = code.split('\n');
       for (let i = 0; i < codeLines.length; i++) {
         const line = codeLines[i].trim();
-        if (line.startsWith('function myFunction')) {
-          myFunction = true;
+        if (line.startsWith('const book = {') && line.includes('title') && line.includes('author')) {
+          book = true;
           break;
         }
       }
-  
-      if (!myFunction) {
+
+      if (!book) {
         return {
           success: false,
-          comments: ['Function "myFunction" is not declared.'],
+          comments: ['Object "book" is not declared with properties "title" and "author".'],
           consoleOutput: [],
         };
       }
-  
+
       // Additional checks or logic specific to this exercise can be added here
-  
+
       return {
         success: true,
         comments,
@@ -74,8 +74,7 @@ const CodeEditorComponent = () => {
       console.log = originalConsoleLog;
     }
   };
-  
-  
+
   return (
     <div>
       {typeof window !== 'undefined' && (

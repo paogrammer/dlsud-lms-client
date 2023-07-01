@@ -49,7 +49,7 @@ const LessonPage = () => {
 
       <section className="pt-50 pb-120">
         <div className="container">
-          <h1 className="lesson-title mb-50">Lesson 2 - Functions</h1>
+          <h1 className="lesson-title mb-50">Lesson 4 - Objects</h1>
 
           <div className="row justify-content-center">
             {/* Column for the code editor */}
@@ -67,24 +67,18 @@ const LessonPage = () => {
                  {/* Citation */}
                  <div className="citation p-20">
                   <p>
-                    Source: <a href="https://www.w3schools.com/">w3schools.com</a>
+                    Source: <a href="https://www.w3schools.com/">w3schools.com</a>, <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">developer.mozilla.org</a>
                   </p>
                 </div>
                 {/* Add your explanation content here */}
                 <h5>Overview:</h5>
-                <p>A JavaScript function is a block of code designed to perform a particular task, and executed when "something" invokes it (calls it).</p>
-                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
-                <p>The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)</p>
-                <p>The code to be executed, by the function, is placed inside curly brackets: {}</p>
-                <p>Function parameters are listed inside the parentheses () in the function definition.</p>
-                <p>Function arguments are the values received by the function when it is invoked.</p>
-                <p>Inside the function, the arguments (the parameters) behave as local variables.</p>
+                <p>An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects). Let's work through an example to understand what they look like.</p>
+                <p>A car has properties like weight and color:</p>
+                <code>{`const car = {type:"Fiat", model:"500", color:"white"};`}</code>
                 
-                <p style={{ whiteSpace: 'pre'}}>Sample function syntax:<br></br>
-                  <code>{`function nameOfFunction() {
-                    (your code goes here)
-                  }`}</code>
-                </p>
+                <p>The values are written as name:value pairs (name and value separated by a colon).</p>
+                
+            
                 
                
               </div>
@@ -93,7 +87,7 @@ const LessonPage = () => {
               <div className="instructions-section">
                 {/* Add your instructions content here */}
                 <h5>Instructions:</h5>
-                <p>Declare a function called myFunction that takes no parameters. </p>
+                <p>Declare an object called 'book' and the properties 'title' and 'author'. You can put any value in these.</p>
                
               </div>
             </div>
@@ -106,7 +100,7 @@ const LessonPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <Link href="/lesson">
+              <Link href="/lesson-3">
                 <a>Previous Lesson</a>
               </Link>
             </div>
@@ -116,7 +110,7 @@ const LessonPage = () => {
               </Link>
             </div>
             <div className="col">
-              <Link href="/lesson-3">
+              <Link href="/lesson-5">
                 <a>Next Lesson</a>
               </Link>
             </div>

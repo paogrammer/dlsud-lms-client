@@ -47,7 +47,7 @@ const HomeTwoHeader = () => {
                         <div className="col-xxl-8 col-xl-9 col-lg-10 col-md-6 col-6">
                            <div className="header__bottom-left d-flex align-items-center">
                               <div className="logo">
-                                 <Link href="/">
+                                 <Link href="/my-courses">
                                     <a >
                                        <img src="assets/img/logo/logo-2.png" alt="logo" />
                                     </a>

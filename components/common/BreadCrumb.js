@@ -11,7 +11,7 @@ const BreadCrumb = ({ title, subtitle }) => {
                         <h3 className="breadcrumb__title">{title}</h3>
                         <div className="breadcrumb__list">
                            <span>
-                              <Link href="/">
+                              <Link href="/my-courses">
                                  <a >Home</a>
                               </Link>
                            </span>

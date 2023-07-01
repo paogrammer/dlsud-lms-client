@@ -23,7 +23,7 @@ const ErrorPage = () => {
                            <p>Oops! The page you are looking for does not exist. It might have been moved or deleted.</p>
 
                            <div className="error__btn">
-                              <Link href="/">
+                              <Link href="/my-courses">
                                  <a className="tp-btn">Back to home</a>
                               </Link>
                            </div>

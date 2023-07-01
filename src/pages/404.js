@@ -16,7 +16,7 @@ const ErroPage = () => {
                         <h3 className="breadcrumb__title">Error Page</h3>
                         <div className="breadcrumb__list">
                            <span>
-                              <Link href="/">
+                              <Link href="/my-courses">
                                  <a >Home</a>
                               </Link>
                            </span>
@@ -42,7 +42,7 @@ const ErroPage = () => {
                            <p>Oops! The page you are looking for does not exist. It might have been moved or deleted.</p>
 
                            <div className="error__btn">
-                              <Link href="/">
+                              <Link href="/my-courses">
                                  <a className="tp-btn">Back to home</a>
                               </Link>
                            </div>

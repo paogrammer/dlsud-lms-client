@@ -49,7 +49,7 @@ const LessonPage = () => {
 
       <section className="pt-50 pb-120">
         <div className="container">
-          <h1 className="lesson-title mb-50">Lesson 2 - Functions</h1>
+          <h1 className="lesson-title mb-50">Lesson 5 - Arithmethic Operators</h1>
 
           <div className="row justify-content-center">
             {/* Column for the code editor */}
@@ -67,24 +67,18 @@ const LessonPage = () => {
                  {/* Citation */}
                  <div className="citation p-20">
                   <p>
-                    Source: <a href="https://www.w3schools.com/">w3schools.com</a>
+                    Source: <a href="https://www.javascripttutorial.net/javascript-arithmetic-operators/">javascripttutorial.net</a>
                   </p>
                 </div>
                 {/* Add your explanation content here */}
                 <h5>Overview:</h5>
-                <p>A JavaScript function is a block of code designed to perform a particular task, and executed when "something" invokes it (calls it).</p>
-                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
-                <p>The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)</p>
-                <p>The code to be executed, by the function, is placed inside curly brackets: {}</p>
-                <p>Function parameters are listed inside the parentheses () in the function definition.</p>
-                <p>Function arguments are the values received by the function when it is invoked.</p>
-                <p>Inside the function, the arguments (the parameters) behave as local variables.</p>
-                
-                <p style={{ whiteSpace: 'pre'}}>Sample function syntax:<br></br>
-                  <code>{`function nameOfFunction() {
-                    (your code goes here)
-                  }`}</code>
-                </p>
+                <p>JavaScript supports the following standard arithmetic operators: addition (+), subtraction (-), multiplication (*), and division (/).</p>
+                <p>An arithmetic operator accepts numerical values as operands and returns a single numerical value. The numerical values can be literals or variables.</p>
+     
+                <p>The addition operator returns the sum of two values. For example, the following uses the addition operator to calculate the sum of two numbers:</p>
+                <p style={{whiteSpace: 'pre'}}><code>{`let sum = 10 + 20;
+console.log(sum); // 30`}</code></p>
+            
                 
                
               </div>
@@ -93,7 +87,7 @@ const LessonPage = () => {
               <div className="instructions-section">
                 {/* Add your instructions content here */}
                 <h5>Instructions:</h5>
-                <p>Declare a function called myFunction that takes no parameters. </p>
+                <p>Declare a variable named 'result', and use either of the 4 basic arithmethic operators to add, subtract, multiply or divide two random numbers. You can use console.log to display the result.</p>
                
               </div>
             </div>
@@ -106,7 +100,7 @@ const LessonPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <Link href="/lesson">
+              <Link href="/lesson-4">
                 <a>Previous Lesson</a>
               </Link>
             </div>
@@ -115,11 +109,11 @@ const LessonPage = () => {
                 <a>Back to Course Menu</a>
               </Link>
             </div>
-            <div className="col">
-              <Link href="/lesson-3">
+            {/* <div className="col">
+              <Link href="/lesson-5">
                 <a>Next Lesson</a>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

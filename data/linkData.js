@@ -60,7 +60,7 @@ const links = [
 
     {
         id:4,
-        url:'/about',
+        url:'/my-courses',
         name:'Pages',
         submenu:[
             // {
@@ -98,6 +98,11 @@ const links = [
                 url:'/lesson-2',
                 name:'Lesson Two'
             },
+            {
+                id:11,
+                url:'/lesson-3',
+                name:'Lesson Three'
+            },
             // {
             //     id:6,
             //     url:'/my-profile',
@@ -107,6 +112,16 @@ const links = [
                 id:10,
                 url:'/my-courses',
                 name:'My Courses'
+            },
+            {
+                id:12,
+                url:'/lesson-4',
+                name:'Lesson Four'
+            },
+            {
+                id:13,
+                url:'/lesson-5',
+                name:'Lesson Five'
             },
             {
                 id:8,
@@ -150,11 +165,11 @@ const links = [
     //     ]
     // },
 
-    {
-        id:6,
-        url:'/contact',
-        name:'Contact'
-    },
+    // {
+    //     id:6,
+    //     url:'/contact',
+    //     name:'Contact'
+    // },
 ]
 
 export default links;

@@ -12,7 +12,7 @@ const HomeTwoFooter = () => {
                            <div className="footer__widget footer__widget-2 footer-col-2-1 mb-50">
                               <div className="footer__logo">
                                  <div className="logo">
-                                    <Link href="/">
+                                    <Link href="/my-courses">
                                        <a >
                                           <img src="assets/img/logo/logo-2.png" alt="" />
                                        </a>
@@ -118,7 +118,7 @@ const HomeTwoFooter = () => {
                         <div className="row">
                            <div className="col-xxl-12">
                               <div className="footer__copyright text-center">
-                                 <p>© 2022 Educal. All Rights Reserved</p>
+                                 {/* <p>© 2022 Educal. All Rights Reserved</p> */}
                               </div>
                            </div>
                         </div>

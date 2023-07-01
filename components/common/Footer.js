@@ -12,7 +12,7 @@ const Footer = ({ white_bg = '' }) => {
                            <div className="footer__widget footer-col-1 mb-50">
                               <div className="footer__logo">
                                  <div className="logo">
-                                    <Link href="/">
+                                    <Link href="/my-courses">
                                        <a>
                                           <img src="assets/img/logo/logo.png" alt="" />
                                        </a>
@@ -35,7 +35,7 @@ const Footer = ({ white_bg = '' }) => {
                               </div>
                            </div>
                         </div>
-                        <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                        {/* <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-5">
                            <div className="footer__widget mb-50">
                               <h3 className="footer__widget-title">Explore</h3>
                               <div className="footer__widget-content">
@@ -64,8 +64,8 @@ const Footer = ({ white_bg = '' }) => {
                                  </ul>
                               </div>
                            </div>
-                        </div>
-                        <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                        </div> */}
+                        {/* <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-5">
                            <div className="footer__widget mb-50">
                               <h3 className="footer__widget-title">Links</h3>
                               <div className="footer__widget-content">
@@ -94,9 +94,9 @@ const Footer = ({ white_bg = '' }) => {
                                  </ul>
                               </div>
                            </div>
-                        </div>
+                        </div> */}
                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7">
-                           <div className="footer__widget footer-col-4 mb-50">
+                           {/* <div className="footer__widget footer-col-4 mb-50">
                               <h3 className="footer__widget-title">Sign up for our newsletter</h3>
 
                               <div className="footer__subscribe">
@@ -108,7 +108,7 @@ const Footer = ({ white_bg = '' }) => {
                                     </div>
                                  </form>
                               </div>
-                           </div>
+                           </div> */}
                         </div>
                      </div>
                   </div>
@@ -119,7 +119,7 @@ const Footer = ({ white_bg = '' }) => {
                         <div className="row">
                            <div className="col-xxl-12">
                               <div className="footer__copyright text-center">
-                                 <p>© 2022 Educal. All Rights Reserved</p>
+                                 {/* <p>© 2022 Educal. All Rights Reserved</p> */}
                               </div>
                            </div>
                         </div>

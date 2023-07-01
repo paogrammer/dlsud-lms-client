@@ -49,7 +49,7 @@ const LessonPage = () => {
 
       <section className="pt-50 pb-120">
         <div className="container">
-          <h1 className="lesson-title mb-50">Lesson 2 - Functions</h1>
+          <h1 className="lesson-title mb-50">Lesson 3 - Arrays</h1>
 
           <div className="row justify-content-center">
             {/* Column for the code editor */}
@@ -72,18 +72,19 @@ const LessonPage = () => {
                 </div>
                 {/* Add your explanation content here */}
                 <h5>Overview:</h5>
-                <p>A JavaScript function is a block of code designed to perform a particular task, and executed when "something" invokes it (calls it).</p>
-                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
-                <p>The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)</p>
-                <p>The code to be executed, by the function, is placed inside curly brackets: {}</p>
-                <p>Function parameters are listed inside the parentheses () in the function definition.</p>
-                <p>Function arguments are the values received by the function when it is invoked.</p>
-                <p>Inside the function, the arguments (the parameters) behave as local variables.</p>
+                <p>An array is a special variable, which can hold more than one value:</p>
+                <code>const cars = ["Saab", "Volvo", "BMW"];</code>
+                <p>An array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+                <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
                 
-                <p style={{ whiteSpace: 'pre'}}>Sample function syntax:<br></br>
-                  <code>{`function nameOfFunction() {
-                    (your code goes here)
-                  }`}</code>
+                <p style={{ whiteSpace: 'pre'}}>
+                  <code>{`
+                    const cars = [
+                      "Saab",
+                      "Volvo",
+                      "BMW"
+                    ];
+                `}</code>
                 </p>
                 
                
@@ -93,7 +94,7 @@ const LessonPage = () => {
               <div className="instructions-section">
                 {/* Add your instructions content here */}
                 <h5>Instructions:</h5>
-                <p>Declare a function called myFunction that takes no parameters. </p>
+                <p>Declare an array called 'fruits' and add any number of fruits of your choosing.</p>
                
               </div>
             </div>
@@ -106,7 +107,7 @@ const LessonPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <Link href="/lesson">
+              <Link href="/lesson-2">
                 <a>Previous Lesson</a>
               </Link>
             </div>
@@ -116,7 +117,7 @@ const LessonPage = () => {
               </Link>
             </div>
             <div className="col">
-              <Link href="/lesson-3">
+              <Link href="/lesson-4">
                 <a>Next Lesson</a>
               </Link>
             </div>

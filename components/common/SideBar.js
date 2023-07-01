@@ -34,11 +34,11 @@ const Sidebar = ({ show, handleClose, dynammicPageHeader = false }) => {
                <Offcanvas.Header closeButton>
                   <div className="offcanvas__logo logo">
                      {
-                        dynammicPageHeader ? <Link href="/">
+                        dynammicPageHeader ? <Link href="/my-courses">
                            <a >
                               <img src={"/" + "assets/img/logo/logo.png"} alt="logo" />
                            </a>
-                        </Link> : <Link href="/">
+                        </Link> : <Link href="/my-courses">
                            <a >
                               <img src="assets/img/logo/logo.png" alt="logo" />
                            </a>
@@ -70,7 +70,7 @@ const Sidebar = ({ show, handleClose, dynammicPageHeader = false }) => {
                               {
                                  !user?.email &&
                                  <>
-                                    <Collapsible trigger={<Link href="/">Home</Link>} triggerTagName="div"
+                                    <Collapsible trigger={<Link href="/my-courses">Home</Link>} triggerTagName="div"
                                        triggerOpenedClassName="icon_close" triggerClassName="iconAdd" open={false}>
                                        <ul className="sidebar_sub_menu submenu text-white">
                                           <li><Link href="/home"><a >Home Style 1</a></Link></li>
@@ -125,7 +125,7 @@ const Sidebar = ({ show, handleClose, dynammicPageHeader = false }) => {
                               {
                                  user?.email &&
                                  <>
-                                    <Collapsible trigger={<Link href="/">Home</Link>} triggerTagName="div"
+                                    <Collapsible trigger={<Link href="/my-courses">Home</Link>} triggerTagName="div"
                                        triggerOpenedClassName="icon_close" triggerClassName="iconAdd" open={false}>
                                        <ul className="sidebar_sub_menu submenu text-white">
                                           <li><Link href="/home"><a >Home Style 1</a></Link></li>

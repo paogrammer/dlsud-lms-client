@@ -35,3 +35,16 @@ module.exports = {
     return config;
   },
 };
+
+
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/my-courses',
+        permanent: true,
+      },
+    ];
+  },
+};

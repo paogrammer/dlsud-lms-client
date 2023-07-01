@@ -27,7 +27,15 @@ const DetailsTabItems = ({ dynamicPage }) => {
                <div className="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
                   <div className="course__description">
                      <h3>Course Overview</h3>
-                     <p>Only a quid me old mucker squiffy tomfoolery grub cheers ruddy cor blimey guvnor in my flat, up the duff Eaton car boot up the kyver pardon you A bit of how your father David skive off sloshed, dont get shirty with me chip shop vagabond crikey bugger Queen English chap. Matie boy nancy boy bite your arm off up the kyver old no biggie fantastic boot, David have it show off show off pick your nose and blow off lost the plot porkies bits and bobs only a quid bugger all mate, absolutely bladdered bamboozled its your round dont get shirty with me down the pub well. Give us a bell bits and bobs Charles he lost his bottle super my lady cras starkers bite your arm off Queens English, pardon me horse play Elizabeth a blinding shot chinwag knees up do one David, blag cup of tea Eaton so I said bleeding haggle James Bond cup of char. Gosh William ummm Im telling crikey burke I dont want no agro A bit of how your father bugger all mate off his nut that, what a plonker cuppa owt to do with me nancy boy show off show off pick your nose and blow off spiffing good time lavatory me old mucker, chimney pot what a load of rubbish boot squiffy lost the plot brolly wellies excuse my french.</p>
+                     <p>Welcome to the JavaScript Fundamentals course! This comprehensive course is designed to provide you with a solid understanding of the core concepts of JavaScript programming. Whether you're a beginner with no prior coding experience or an experienced developer looking to enhance your skills, this course will empower you to write dynamic and interactive web applications.</p>
+
+                     <p>Throughout this course, you will dive deep into essential topics such as functions, variables, arrays, objects, and arithmetic operators. You will learn how to define and utilize functions to create reusable blocks of code, making your programs more modular and efficient. Understanding variables will enable you to store and manipulate data, opening up endless possibilities for dynamic application development.</p>
+
+                     <p>The course will also cover arrays, which allow you to work with collections of data, perform operations on multiple values, and iterate through elements. Objects, another crucial concept, will be explored in detail, enabling you to model real-world entities with properties and behaviors. With this knowledge, you'll be able to create complex data structures and build more sophisticated applications.</p>
+
+                     <p>Additionally, you will master arithmetic operators, including addition, subtraction, multiplication, division, and more. These operators will empower you to perform mathematical computations, manipulate data, and create dynamic interactions within your programs.</p>
+
+                     <p>Throughout the course, you will have hands-on coding exercises and practical examples to reinforce your understanding of each topic. By the end of this course, you will have a strong foundation in JavaScript fundamentals, equipping you with the skills to write efficient, interactive, and professional-quality JavaScript code.</p>
 
                      <div className="course__tag-4 mb-35 mt-35">
                         <i className="fal fa-tag"></i>
@@ -104,7 +112,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Lesson 1:</span> Hello, World!</h3>
+                                       <h3> <span>Lesson 1:</span> Variables</h3>
                                     </div>
                                     {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 14 minutes</span>
@@ -146,7 +154,22 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Lesson 2: </span> Sum of 2 variables</h3>
+                                       <h3> <span>Lesson 2: </span> Functions</h3>
+                                    </div>
+                                    {/* <div className="course__curriculum-meta">
+                                       <span className="time"> <i className="icon_clock_alt"></i> 22 minutes</span>
+                                    </div> */}
+                                 </div>
+                                 <div className="course__curriculum-content d-sm-flex justify-content-between align-items-center">
+                                    <div className="course__curriculum-info">
+                                       <svg className="document" viewBox="0 0 24 24">
+                                          <path className="st0" d="M14,2H6C4.9,2,4,2.9,4,4v16c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8L14,2z" />
+                                          <polyline className="st0" points="14,2 14,8 20,8 " />
+                                          <line className="st0" x1="16" y1="13" x2="8" y2="13" />
+                                          <line className="st0" x1="16" y1="17" x2="8" y2="17" />
+                                          <polyline className="st0" points="10,9 9,9 8,9 " />
+                                       </svg>
+                                       <h3> <span>Lesson 3: </span> Arrays</h3>
                                     </div>
                                     {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 22 minutes</span>
@@ -174,7 +197,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Lesson 1:</span> Hello, World!</h3>
+                                       <h3> <span>Lesson 4:</span> Objects</h3>
                                     </div>
                                     {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 14 minutes</span>
@@ -216,7 +239,7 @@ const DetailsTabItems = ({ dynamicPage }) => {
                                           <line className="st0" x1="16" y1="17" x2="8" y2="17" />
                                           <polyline className="st0" points="10,9 9,9 8,9 " />
                                        </svg>
-                                       <h3> <span>Lesson 2: </span> Sum of 2 variables</h3>
+                                       <h3> <span>Lesson 5: </span> Arithmethic Operators</h3>
                                     </div>
                                     {/* <div className="course__curriculum-meta">
                                        <span className="time"> <i className="icon_clock_alt"></i> 22 minutes</span>

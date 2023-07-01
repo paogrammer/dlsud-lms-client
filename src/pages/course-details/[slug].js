@@ -152,8 +152,8 @@ const CourseDetails = () => {
                     </span>
                     <span>Courses</span>
                   </div>
-                  <span className="breadcrumb__title-pre">Object-oriented programming</span>
-                  <h5 className="breadcrumb__title-2">Javascript Course</h5>
+                  <span className="breadcrumb__title-pre">Fundamental JavaScript</span>
+                  <h5 className="breadcrumb__title-2">Basic JavaScript Concepts</h5>
                 </div>
                 {/* <div className="course__meta-2 d-sm-flex align-items-center mb-30">
                   <div className="course__teacher-3 d-flex align-items-center mr-70 mb-30">
@@ -366,7 +366,7 @@ const CourseDetails = () => {
                             </svg>
                           </div>
                           <div className="course__video-info">
-                            <h5><span>Lectures :</span>{lectures}</h5>
+                            <h5><span>Lectures : 5</span>{lectures}</h5>
                           </div>
                         </li>
                         <li className="d-flex align-items-center">

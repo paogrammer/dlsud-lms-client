@@ -38,7 +38,7 @@ const HomeThreeHeader = () => {
                         </div>
                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-6">
                            <div className="logo text-lg-center">
-                              <Link href="/">
+                              <Link href="/my-courses">
                                  <a>
                                     <img src="assets/img/logo/logo-3.png" alt="logo" />
                                  </a>

@@ -5,6 +5,35 @@ const AceEditor = dynamic(() => import('react-ace'), {
   ssr: false, // This ensures the component is not rendered on the server
 });
 
+const fruitsValidator = (code) => {
+  try {
+    const regex = /const\s+fruits\s*=\s*\[.*?\];/s;
+    const isFruitsDeclared = regex.test(code);
+
+    if (isFruitsDeclared) {
+      return {
+        success: true,
+        message: 'Array "fruits" is declared successfully.',
+      };
+    } else {
+      return {
+        success: false,
+        message: 'Array "fruits" is not declared or has an incorrect syntax.',
+      };
+    }
+  } catch (error) {
+    console.error('Error during code execution:', error);
+    return {
+      success: false,
+      message: 'Error occurred during code execution.',
+    };
+  }
+};
+
+
+
+
+
 const CodeEditorComponent = () => {
   const [code, setCode] = useState('');
   const [isCodeSuccessful, setIsCodeSuccessful] = useState(false);
@@ -15,18 +44,11 @@ const CodeEditorComponent = () => {
     setCode(newCode);
   };
 
-  const handleRunClick = () => {
-    const testResult = executeCode(code);
-    setIsCodeSuccessful(testResult.success);
-    setConsoleOutput(testResult.consoleOutput);
-    setHasCodeRun(true);
-  };
-
   const executeCode = (code) => {
     const comments = [];
     const consoleOutput = [];
     const originalConsoleLog = console.log;
-  
+
     console.log = (message) => {
       if (typeof message === 'string' && message.startsWith('//')) {
         comments.push(message); // Capture comments
@@ -34,30 +56,21 @@ const CodeEditorComponent = () => {
         consoleOutput.push(message); // Capture console output
       }
     };
-  
+
     try {
       eval(code);
-  
-      let myFunction;
-      const codeLines = code.split('\n');
-      for (let i = 0; i < codeLines.length; i++) {
-        const line = codeLines[i].trim();
-        if (line.startsWith('function myFunction')) {
-          myFunction = true;
-          break;
-        }
-      }
-  
-      if (!myFunction) {
+
+      const validation = fruitsValidator(code);
+      if (!validation.success) {
         return {
           success: false,
-          comments: ['Function "myFunction" is not declared.'],
+          comments: [validation.message],
           consoleOutput: [],
         };
       }
-  
+
       // Additional checks or logic specific to this exercise can be added here
-  
+
       return {
         success: true,
         comments,
@@ -74,8 +87,14 @@ const CodeEditorComponent = () => {
       console.log = originalConsoleLog;
     }
   };
-  
-  
+
+  const handleRunClick = () => {
+    const testResult = executeCode(code);
+    setIsCodeSuccessful(testResult.success);
+    setConsoleOutput(testResult.consoleOutput);
+    setHasCodeRun(true);
+  };
+
   return (
     <div>
       {typeof window !== 'undefined' && (

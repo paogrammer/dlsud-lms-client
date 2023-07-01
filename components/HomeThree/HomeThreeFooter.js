@@ -12,7 +12,7 @@ const HomeThreeFooter = () => {
                            <div className="footer__widget footer__widget-3 footer-col-3-1 mb-50">
                               <div className="footer__logo">
                                  <div className="logo">
-                                    <Link href="/">
+                                    <Link href="/my-courses">
                                        <a >
                                           <img src="assets/img/logo/logo-3.png" alt="" />
                                        </a>

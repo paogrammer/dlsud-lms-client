@@ -48,7 +48,7 @@ const Header = () => {
                            <div className="header__info">
                               <ul>
                                  <li>
-                                    <a href="mailto:info@educal.com">
+                                    <a href="mailto:info@dlsud.edu.ph">
                                        <svg viewBox="0 0 15 13">
                                           <path fillRule="evenodd" clipRule="evenodd" d="M7.5163 7.93224C7.11179 7.93224 6.70849 7.79861 6.37109 7.53136L3.65922 5.34493C3.46391 5.18772 3.43368 4.90172 3.59029 4.70702C3.7481 4.51292 4.0335 4.48209 4.2282 4.63869L6.93765 6.8227C7.27807 7.09238 7.75756 7.09238 8.1004 6.82028L10.7826 4.6399C10.9773 4.48088 11.2627 4.51111 11.4212 4.70581C11.579 4.8999 11.5493 5.1853 11.3553 5.34372L8.66817 7.52773C8.32835 7.7974 7.92203 7.93224 7.5163 7.93224Z" fill="#4B535A" />
                                           <path d="M7.5163 7.93224C7.11179 7.93224 6.70849 7.79861 6.37109 7.53136L3.65922 5.34493C3.46391 5.18772 3.43368 4.90172 3.59029 4.70702C3.7481 4.51292 4.0335 4.48209 4.2282 4.63869L6.93765 6.8227C7.27807 7.09238 7.75756 7.09238 8.1004 6.82028L10.7826 4.6399C10.9773 4.48088 11.2627 4.51111 11.4212 4.70581C11.579 4.8999 11.5493 5.1853 11.3553 5.34372L8.66817 7.52773C8.32835 7.7974 7.92203 7.93224 7.5163 7.93224" stroke="#4B535A" strokeWidth="0.2" />
@@ -57,7 +57,7 @@ const Header = () => {
                                        </svg> info@dlsud.edu.ph</a>
                                  </li>
                                  <li>
-                                    <a href="https://goo.gl/maps/qzqY2PAcQwUz1BYN9" target="_blank" rel="noreferrer">
+                                    <a href="https://goo.gl/maps/emRNv5Gj9a8ejM7P9" target="_blank" rel="noreferrer">
                                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path fillRule="evenodd" clipRule="evenodd" d="M5.9235 4.66671C5.23068 4.66671 4.66709 5.2303 4.66709 5.92383C4.66709 6.61666 5.23068 7.17953 5.9235 7.17953C6.61632 7.17953 7.17991 6.61666 7.17991 5.92383C7.17991 5.2303 6.61632 4.66671 5.9235 4.66671ZM5.92354 8.25642C4.63698 8.25642 3.59021 7.21037 3.59021 5.9238C3.59021 4.63652 4.63698 3.58975 5.92354 3.58975C7.21011 3.58975 8.25688 4.63652 8.25688 5.9238C8.25688 7.21037 7.21011 8.25642 5.92354 8.25642Z" fill="#4B535A" />
                                           <path fillRule="evenodd" clipRule="evenodd" d="M5.92278 1.07695C3.25058 1.07695 1.07663 3.27172 1.07663 5.96834C1.07663 9.39942 5.11437 12.7422 5.92278 12.9202C6.73119 12.7415 10.7689 9.3987 10.7689 5.96834C10.7689 3.27172 8.59499 1.07695 5.92278 1.07695ZM5.92259 14C4.63459 14 -0.000488281 10.0139 -0.000488281 5.96831C-0.000488281 2.67723 2.65664 0 5.92259 0C9.18854 0 11.8457 2.67723 11.8457 5.96831C11.8457 10.0139 7.21059 14 5.92259 14Z" fill="#4B535A" />
@@ -87,11 +87,11 @@ const Header = () => {
                                  }
 
                               </div>
-                              <div className="header__btn ml-20">
+                              {/* <div className="header__btn ml-20">
                                  <Link href="/contact">
                                     <a className="header-btn">contact us</a>
                                  </Link>
-                              </div>
+                              </div> */}
                            </div>
                         </div>
                      </div>
@@ -102,7 +102,7 @@ const Header = () => {
                      <div className="row align-items-center">
                         <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-6">
                            <div className="logo">
-                              <Link href="/">
+                              <Link href="/my-courses">
                                  <a>
                                     <img src="assets/img/logo/logo.png" alt="logo" />
                                  </a>
@@ -153,7 +153,7 @@ const Header = () => {
                               </nav>
                            </div>
                         </div>
-                        <div className="col-xxl-3 col-xl-3 col-lg-2 col-md-6 col-6">
+                        {/* <div className="col-xxl-3 col-xl-3 col-lg-2 col-md-6 col-6">
                            <div className="header__bottom-right d-flex justify-content-end align-items-center pl-30">
                               <div className="header__search w-100 d-none d-xl-block">
                                  <form onSubmit={handleSubmit}>
@@ -175,7 +175,7 @@ const Header = () => {
                                  </button>
                               </div>
                            </div>
-                        </div>
+                        </div> */}
                      </div>
                   </div>
                </div>

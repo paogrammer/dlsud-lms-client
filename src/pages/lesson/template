@@ -30,16 +30,10 @@ const LessonPage = () => {
   
         .explanation-section {
           flex: 65%;
-          position: relative;
         }
   
         .instructions-section {
           flex: 35%;
-        }
-  
-        .citation {
-          font-size: 14px;
-          text-align: right;
         }
       `}</style>
 
@@ -49,7 +43,7 @@ const LessonPage = () => {
 
       <section className="pt-50 pb-120">
         <div className="container">
-          <h1 className="lesson-title mb-50">Lesson 2 - Functions</h1>
+          <h1 className="lesson-title mb-50">Lesson 1 - Variables</h1>
 
           <div className="row justify-content-center">
             {/* Column for the code editor */}
@@ -64,37 +58,14 @@ const LessonPage = () => {
             <div className="col-xxl-6 column-right">
               {/* Explanation section */}
               <div className="explanation-section">
-                 {/* Citation */}
-                 <div className="citation p-20">
-                  <p>
-                    Source: <a href="https://www.w3schools.com/">w3schools.com</a>
-                  </p>
-                </div>
                 {/* Add your explanation content here */}
-                <h5>Overview:</h5>
-                <p>A JavaScript function is a block of code designed to perform a particular task, and executed when "something" invokes it (calls it).</p>
-                <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
-                <p>The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)</p>
-                <p>The code to be executed, by the function, is placed inside curly brackets: {}</p>
-                <p>Function parameters are listed inside the parentheses () in the function definition.</p>
-                <p>Function arguments are the values received by the function when it is invoked.</p>
-                <p>Inside the function, the arguments (the parameters) behave as local variables.</p>
-                
-                <p style={{ whiteSpace: 'pre'}}>Sample function syntax:<br></br>
-                  <code>{`function nameOfFunction() {
-                    (your code goes here)
-                  }`}</code>
-                </p>
-                
-               
+                <p>This section provides an explanation of the topic.</p>
               </div>
 
               {/* Instructions section */}
               <div className="instructions-section">
                 {/* Add your instructions content here */}
-                <h5>Instructions:</h5>
-                <p>Declare a function called myFunction that takes no parameters. </p>
-               
+                <p>Instructions: Print "Hello World!" using the command console.log.</p>
               </div>
             </div>
           </div>
@@ -106,9 +77,9 @@ const LessonPage = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <Link href="/lesson">
+              {/* <Link href="/previous-lesson">
                 <a>Previous Lesson</a>
-              </Link>
+              </Link> */}
             </div>
             <div className="col">
               <Link href="/course-details/1">
@@ -116,7 +87,7 @@ const LessonPage = () => {
               </Link>
             </div>
             <div className="col">
-              <Link href="/lesson-3">
+              <Link href="/lesson-2">
                 <a>Next Lesson</a>
               </Link>
             </div>
