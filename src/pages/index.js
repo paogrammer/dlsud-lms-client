@@ -1,34 +1,20 @@
-import Head from "next/head";
-import AboutArea from "../../components/Home/AboutArea";
-import HomeBlog from "../../components/Home/HomeBlog";
-import Campus from "../../components/Home/Campus";
-import CounterArea from "../../components/Home/CounterArea";
-import Features from "../../components/Home/Features";
-import Header from "../../components/Home/Header";
-import HeroArea from "../../components/Home/HeroArea";
-import HomeCourses from "../../components/Home/HomeCourses";
-import ResearchArea from "../../components/Home/ResearchArea";
-import Cta from "../../components/Home/Cta";
+import React from "react";
+import BreadCrumb from "../../components/common/BreadCrumb";
 import Footer from "../../components/common/Footer";
+import Header from "../../components/Home/Header";
+import MyCoursesArea from "../../components/MyCourses/MyCoursesArea";
 import SEO from "../../components/seo";
 
-export default function Home() {
+const MyCourses = () => {
   return (
     <>
-      <SEO pageTitle="Home Default" />
-
+      <SEO pageTitle="My Courses" />
       <Header />
-      <HeroArea />
-      <Features />
-
-      <AboutArea />
-      <CounterArea />
-      <HomeCourses />
-      <Campus />
-      <ResearchArea />
-      <HomeBlog />
-      <Cta />
+      <BreadCrumb title="My Courses" subtitle="My Courses" />
+      <MyCoursesArea />
       <Footer />
     </>
   );
-}
+};
+
+export default MyCourses;
