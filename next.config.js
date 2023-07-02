@@ -48,3 +48,17 @@ module.exports = {
     ];
   },
 };
+
+
+module.exports = {
+  // Other configuration options...
+
+  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+    // Exclude the '/team-details' path from export
+    return {
+      ...defaultPathMap,
+      '/team-details': { page: '/404' }, // Replace with your desired fallback page
+    };
+  },
+};
+
