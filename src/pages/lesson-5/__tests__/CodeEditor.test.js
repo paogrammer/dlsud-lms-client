@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import CodeEditorComponent from './CodeEditor';
+import CodeEditorComponent from '../CodeEditor';
+
 
 describe('CodeEditorComponent', () => {
   it('should render the code editor', () => {
